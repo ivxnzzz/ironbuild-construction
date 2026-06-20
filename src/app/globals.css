@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Custom copper/bronze accent */
+  --color-copper: #c9844c;
+  --color-copper-light: #d4a574;
+  --color-copper-dark: #a66b3a;
+}
+
+:root {
+  --background: #131110;
+  --foreground: #f5f0eb;
+  --card: #1c1917;
+  --card-foreground: #f5f0eb;
+  --popover: #1c1917;
+  --popover-foreground: #f5f0eb;
+  --primary: #c9844c;
+  --primary-foreground: #131110;
+  --secondary: #292524;
+  --secondary-foreground: #f5f0eb;
+  --muted: #292524;
+  --muted-foreground: #a8a29e;
+  --accent: #c9844c;
+  --accent-foreground: #131110;
+  --destructive: #dc2626;
+  --border: #3d3633;
+  --input: #292524;
+  --ring: #c9844c;
+  --chart-1: #c9844c;
+  --chart-2: #d4a574;
+  --chart-3: #a66b3a;
+  --chart-4: #78716c;
+  --chart-5: #57534e;
+  --radius: 0.375rem;
+  --sidebar: #1c1917;
+  --sidebar-foreground: #f5f0eb;
+  --sidebar-primary: #c9844c;
+  --sidebar-primary-foreground: #131110;
+  --sidebar-accent: #292524;
+  --sidebar-accent-foreground: #f5f0eb;
+  --sidebar-border: #3d3633;
+  --sidebar-ring: #c9844c;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay {
+    position: relative;
+  }
+  .noise-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Architectural grid pattern */
+  .arch-grid {
+    background-image:
+      linear-gradient(rgba(201, 132, 76, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 132, 76, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  /* Diagonal line accent */
+  .diagonal-accent {
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 4px,
+      rgba(201, 132, 76, 0.1) 4px,
+      rgba(201, 132, 76, 0.1) 5px
+    );
+  }
+}
