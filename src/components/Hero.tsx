@@ -73,19 +73,11 @@ export function Hero() {
               Spaces
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="text-base sm:text-lg text-[#a8a29e] max-w-lg leading-relaxed"
-            >
+            <p className="text-base sm:text-lg text-[#a8a29e] max-w-lg leading-relaxed">
               From residential developments to commercial projects, we deliver
               reliable construction solutions with uncompromising quality and
               craftsmanship.
-            </motion.p>
+            </p>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
