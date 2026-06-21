@@ -178,7 +178,7 @@ export function ContactForm() {
               setFormData({ ...formData, projectType: value ?? "" })
             }
           >
-            <SelectTrigger className="bg-[#292524] border-[#3d3633] focus:border-[#c9844c] h-12">
+            <SelectTrigger className="bg-[#292524] border-[#3d3633] focus:border-[#c9844c] h-12" aria-label="Select project type">
               <SelectValue placeholder="Select project type" />
             </SelectTrigger>
             <SelectContent className="bg-[#292524] border-[#3d3633]">
@@ -204,7 +204,7 @@ export function ContactForm() {
               setFormData({ ...formData, budget: value ?? "" })
             }
           >
-            <SelectTrigger className="bg-[#292524] border-[#3d3633] focus:border-[#c9844c] h-12">
+            <SelectTrigger className="bg-[#292524] border-[#3d3633] focus:border-[#c9844c] h-12" aria-label="Select budget range">
               <SelectValue placeholder="Select budget range" />
             </SelectTrigger>
             <SelectContent className="bg-[#292524] border-[#3d3633]">

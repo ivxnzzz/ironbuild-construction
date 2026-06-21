@@ -61,7 +61,6 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
-                delay: 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="font-heading text-[2.75rem] sm:text-6xl lg:text-[5.5rem] leading-[0.95] tracking-tight"
@@ -78,7 +77,6 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
-                delay: 0.2,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="text-base sm:text-lg text-[#a8a29e] max-w-lg leading-relaxed"
@@ -93,7 +91,6 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
-                delay: 0.3,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4"

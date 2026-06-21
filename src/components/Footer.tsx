@@ -108,12 +108,13 @@ export function Footer() {
       <div className="border-t border-[#3d3633]/50">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-12 py-5 sm:py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-[10px] sm:text-xs text-[#78716c] text-center sm:text-left">
+            <p className="text-[10px] sm:text-xs text-[#a8a29e] text-center sm:text-left">
               &copy; {new Date().getFullYear()} IronBuild Construction Group. All
               rights reserved.
             </p>
             <button
               onClick={scrollToTop}
+              aria-label="Scroll to top"
               className="h-9 w-9 sm:h-10 sm:w-10 border border-[#3d3633] flex items-center justify-center hover:bg-[#c9844c] hover:border-[#c9844c] group transition-all duration-300"
             >
               <ArrowUp className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#a8a29e] group-hover:text-[#131110] transition-colors" />
